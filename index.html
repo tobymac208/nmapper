@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Authentication Page</title>
+	</head>
+	<body onload="authenticate()">
+		<h1>Authentication Page</h1>
+		<p>If you're seeing this then you didn't get in.</p>
+
+		<label id="message"></label>
+
+		<script>
+			var authenticate = function() {
+				var username = window.prompt("username: ");
+				var password = window.prompt("password: ");
+
+				if (username == "nik") {
+					if (password == "goodpassword")
+					{
+						// Send the user to the nmapper page.
+						location.href = "nmap.php";
+					}
+				} else {
+					// Change the message content to a useful message.
+					document.getElementById("message").innerHTML = "Authentication failed.";
+				}
+			}
+		</script>
+	</body>
+</html>
