@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "Running Nmap on scanme.nmap.org: "
-nmap -A -T4 scanme.nmap.org
+echo "Running Nmap on default gateway: "
+nmap 192.168.1.1
